@@ -4,12 +4,12 @@ const { use } = require("react");
 
 const userSchema = new mongoose.Schema({
     fullname:{
-        firstName:{
+        firstname:{
             type:String,
             required: true,
             minlength:[3,"First name must be at least 3 characters long"],
         },
-        lastName:{
+        lastname:{
             type:String,
             required: true,
             minlength:[3,"Last name must be at least 3 characters long"],
