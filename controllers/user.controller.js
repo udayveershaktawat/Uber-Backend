@@ -55,7 +55,16 @@ exports.loginUser = async(req,res,next)=>{
     }
 
     // genreate token
-    const token = user.generateAuthToken()
+    const token = user.generateAuthToken();
+    res.cookie('token',token,{
+        httpOnly:true
+    });
 
     return res.status(200).json({token,user})
+}
+
+// get profile controller
+exports.getUserProfile = async(req,res,next)=>{
+    res.status(200).json(req.user)
+
 }
