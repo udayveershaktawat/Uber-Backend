@@ -26,6 +26,9 @@ userController.loginUser)
 // get profile
 router.get("/profile",authMiddleware.authUser,userController.getUserProfile)
 
+// logout
+router.get("/logout",authMiddleware.authUser,userController.logoutUser)
+
 
 
 
