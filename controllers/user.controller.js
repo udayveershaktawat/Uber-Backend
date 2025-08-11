@@ -42,7 +42,7 @@ exports.loginUser = async(req,res,next)=>{
     // by default apn ne password ko select:false kiya hai kyu ki {find} query chalne pr password nhi aayega ,
     //  pr jab apn select ('+password') use karte hain to password bhi aayega
 
-    const user = await userModel.findOne({email}).select('+passwword');
+    const user = await userModel.findOne({email}).select('+password');
 
 
     if(!user){
