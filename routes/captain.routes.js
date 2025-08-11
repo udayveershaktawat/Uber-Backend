@@ -32,6 +32,10 @@ captainController.loginCaptain
 router.get("/profile",authMiddleware.authCaptain,captainController.getCaptainProfile)
 
 
+// logout
+router.get("/logout",authMiddleware.authMiddleware,captainController.logoutCaptain)
+
+
 
 
 
